@@ -1,2 +1,2 @@
 # chatbot-cinefilo
-Repositório destinado aos arquivos de um simples chatbot
+Repositório destinado aos arquivos de um chatbot
