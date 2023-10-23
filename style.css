@@ -7,17 +7,19 @@
 }
 
 body{
-    height: 100vh;
-    width: 100%;
+    background-color: #a8a6a3;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: #a8a6a3;
 }
 
 .container{
-    height: 450px;
-    width: 350px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    width: 80%; 
+    max-width: 350px;
     background-color: #3d3d3d;
     border-radius: 10px;
     box-shadow: 1px 1px 40px 2px #f78f8f
@@ -55,6 +57,7 @@ body{
 }
 
 .outputChat .userQuestion{
+    clear: both;
     float: right;
     background-color: rgb(0, 195, 255);
     padding: 10px;
@@ -63,7 +66,7 @@ body{
 }
 
 .outputChat .bot{
-    
+    clear: both; /* Limpe o float para garantir que os elementos subsequentes apareçam abaixo deste */
     float: left;
     background-color: rgb(245, 245, 245);
     padding: 10px;
@@ -85,19 +88,19 @@ body{
     border-radius: 15px;
 }
 
-.container .interaction{
-    position: fixed;
-    top: 520px;
+.input-group {
     margin-top: 10px;
+    margin-bottom: 10px;
     padding: 0 20px;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 
-.interaction input{
+.input-group input{
     border-radius: 30px;
-    height: 40px;
-    width: 310px;
+    min-width: 100%;
+    min-height: 40px;
     padding: 10px;
     outline: none;
     background-color: #575757;
@@ -114,7 +117,6 @@ body{
     background: none;
     position: absolute;
     right: 25px;
-    top: 5px;
     cursor: pointer;
     border-radius: 50%;
     height: 30px;
@@ -131,4 +133,20 @@ button i{
    top: 3px;
    right: 1px;
    color: azure;
+}
+
+/* RESPONSIVIDADE */
+@media only screen and (min-width: 320px) and (max-width: 400px) {
+    .container{
+        max-width: 450px;
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .input-group {
+        position: fixed; /* Fixe o grupo de entrada quando o teclado estiver aberto */
+        bottom: 0; /* Alinhe o grupo de entrada na parte inferior da tela */
+        width: 100%;
+        z-index: 1; /* Ajuste o índice z para garantir que o grupo de entrada fique acima de outros elementos */
+    }
 }
