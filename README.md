@@ -2,8 +2,6 @@
 
 O Chatbot CineAmigo é um bot de recomendação de filmes simples, criado em JavaScript. Ele interage com os usuários, respondendo a perguntas sobre filmes e gêneros de filmes específicos.
 
-Este projeto consiste em um chatbot com funcionalidades básicas de interação. Ele responde a perguntas sobre filmes e recomenda títulos de acordo com gêneros específicos.
-
 ## Link
 https://ryanlourenco17.github.io/chatbot-cinefilo/
 
